@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         primaryColor: CupertinoColors.systemPurple,
       ),
-      home: HomePage(),
+      home: IntroScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
