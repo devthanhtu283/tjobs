@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:job/page/seeker/dashboard_seeker.dart';
 import 'package:job/page/user/signup.dart';
 
 class LoginPage extends StatelessWidget {
@@ -80,6 +81,7 @@ class LoginPage extends StatelessWidget {
               CupertinoButton(
                 onPressed: () {
                   // Xử lý đăng nhập
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => DashboardSeekerPage(),));
                 },
                 color: CupertinoColors.activeBlue,
                 borderRadius: BorderRadius.circular(8.0),

@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:job/page/seeker/connect_seeker.dart';
 import 'package:job/page/seeker/cv_profile_seeker.dart';
+import 'package:job/page/seeker/home_seeker.dart';
+import 'package:job/page/seeker/notification_seeker.dart';
 import 'package:job/page/seeker/profile_seeker.dart';
 
 
@@ -25,8 +27,12 @@ class DashboardSeekerPage extends StatelessWidget {
             label: 'Connect',
           ),
           BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.app_badge_fill),
+            label: 'Thông báo',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.person),
-            label: 'Profile',
+            label: 'Tài khoản',
           ),
         ],
       ),
@@ -36,11 +42,8 @@ class DashboardSeekerPage extends StatelessWidget {
             return CupertinoTabView(
               builder: (BuildContext context) {
                 return CupertinoPageScaffold(
-                  navigationBar: CupertinoNavigationBar(
-                    middle: Text('Trang chủ'),
-                  ),
                   child: Center(
-                    child: Text('Nội dung trang chủ'),
+                    child: HomePage(),
                   ),
                 );
               },
@@ -66,6 +69,16 @@ class DashboardSeekerPage extends StatelessWidget {
               },
             );
           case 3:
+            return CupertinoTabView(
+              builder: (BuildContext context) {
+                return CupertinoPageScaffold(
+                  child: Center(
+                    child: NotificationSeekerPage(),
+                  ),
+                );
+              },
+            );
+          case 4:
             return CupertinoTabView(
               builder: (BuildContext context) {
                 return CupertinoPageScaffold(

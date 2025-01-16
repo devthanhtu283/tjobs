@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:job/page/test/map.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -8,10 +9,10 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final List<Map<String, String>> categories = [
-    {'image': 'assets/job.png', 'text': 'Việc làm'},
-    {'image': 'assets/company.png', 'text': 'Công ty'},
-    {'image': 'assets/blog.png', 'text': 'Blog'},
-    {'image': 'assets/cv.png', 'text': 'Thư viện CV'},
+    {'image': 'assets/topcv.webbp', 'text': 'Việc làm'},
+    {'image': 'assets/topcv.webbp', 'text': 'Công ty'},
+    {'image': 'assets/topcv.webbp', 'text': 'Blog'},
+    {'image': 'assets/topcv.webbp', 'text': 'Thư viện CV'},
   ];
 
   final List<Map<String, String>> jobs = [
@@ -66,6 +67,14 @@ class _HomePageState extends State<HomePage> {
                     child: Icon(CupertinoIcons.search_circle_fill, size: 40),
                     onPressed: () {
                       // Xử lý tìm kiếm nâng cao
+                    },
+                  ),
+                  SizedBox(width: 8),
+                  CupertinoButton(
+                    padding: EdgeInsets.zero,
+                    child: Icon(CupertinoIcons.map_fill, size: 40),
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => MapScreen(),));
                     },
                   ),
                 ],

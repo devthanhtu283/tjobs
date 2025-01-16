@@ -1,11 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:job/page/intro/intro_page.dart';
+import 'package:job/page/seeker/application_seeker.dart';
 import 'package:job/page/seeker/connect_seeker.dart';
 import 'package:job/page/seeker/cv_profile_seeker.dart';
 import 'package:job/page/seeker/dashboard_seeker.dart';
 import 'package:job/page/seeker/home_seeker.dart';
+import 'package:job/page/seeker/notification_seeker.dart';
 import 'package:job/page/seeker/profile_seeker.dart';
+import 'package:job/page/test/map.dart';
 import 'package:job/page/user/login.dart';
 import 'package:job/page/user/signup.dart';
 
@@ -24,7 +27,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         primaryColor: CupertinoColors.systemPurple,
       ),
-      home: IntroScreen(),
+      home: DashboardSeekerPage(),
       debugShowCheckedModeBanner: false,
     );
   }
